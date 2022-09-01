@@ -1,3 +1,7 @@
+// Global variables
+const defaultSize = 16;
+const defaultColor = "lightblue"
+
 const grid = document.getElementById("grid-container");
 
 function setupGrid(size) {
@@ -6,8 +10,13 @@ function setupGrid(size) {
   for (i = 0; i < size * size; i++) {
     const div = document.createElement("div");
     div.classList.add("box");
+
+    div.addEventListener("mouseover", function () {
+      div.style.backgroundColor = defaultColor;
+    });
+
     grid.appendChild(div);
   }
 }
 
-setupGrid(16);
+setupGrid(defaultSize);
