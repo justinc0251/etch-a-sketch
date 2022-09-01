@@ -1,8 +1,20 @@
 // Global variables
 const defaultSize = 16;
-const defaultColor = "lightblue"
+const defaultColor = "lightblue";
 
 const grid = document.getElementById("grid-container");
+
+let drawColor = false;
+
+window.addEventListener("mousedown", function()
+{
+    drawColor = true;
+});
+
+window.addEventListener("mouseup", function()
+{
+    drawColor = false;
+});
 
 function setupGrid(size) {
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -12,7 +24,7 @@ function setupGrid(size) {
     div.classList.add("box");
 
     div.addEventListener("mouseover", function () {
-      div.style.backgroundColor = defaultColor;
+      if (drawColor) div.style.backgroundColor = defaultColor;
     });
 
     grid.appendChild(div);
