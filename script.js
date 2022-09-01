@@ -6,14 +6,12 @@ const grid = document.getElementById("grid-container");
 
 let drawColor = false;
 
-window.addEventListener("mousedown", function()
-{
-    drawColor = true;
+window.addEventListener("mousedown", function () {
+  drawColor = true;
 });
 
-window.addEventListener("mouseup", function()
-{
-    drawColor = false;
+window.addEventListener("mouseup", function () {
+  drawColor = false;
 });
 
 function setupGrid(size) {
@@ -25,6 +23,10 @@ function setupGrid(size) {
 
     div.addEventListener("mouseover", function () {
       if (drawColor) div.style.backgroundColor = defaultColor;
+    });
+
+    div.addEventListener("mousedown", function () {
+      div.style.backgroundColor = defaultColor;
     });
 
     grid.appendChild(div);
