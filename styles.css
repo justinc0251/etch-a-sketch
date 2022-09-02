@@ -22,10 +22,13 @@ body {
 }
 
 #navbar {
+  gap: 15px;
+  background-color: lightgrey;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  margin: 0 400px;
+  padding: 10px 5px;
 }
 
 input,
@@ -34,7 +37,7 @@ button {
 }
 
 button {
-    padding: 0px 3px;
+  padding: 0px 3px;
 }
 
 #grid-container {
@@ -45,6 +48,10 @@ button {
   background-color: black;
   border: 3px solid black;
   margin: 0 auto;
+}
+
+#size {
+  background-color: black;
 }
 
 .box {

@@ -46,7 +46,7 @@ color.addEventListener("input", (e) => {
 });
 
 reset.addEventListener("click", () => {
-  reloadGrid();
+  clearGrid();
 });
 
 slider.addEventListener("mousemove", (e) => {
