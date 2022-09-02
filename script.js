@@ -3,10 +3,12 @@ const defaultSize = 16;
 const defaultColor = "lightblue";
 let drawColor = false;
 let colorChoice = defaultColor;
+let sizeChoice = defaultSize;
 
 const grid = document.getElementById("grid-container");
 const reset = document.getElementById("reset");
 const color = document.getElementById("color");
+const slider = document.getElementById("size");
 
 window.addEventListener("mousedown", () => {
   drawColor = true;
@@ -15,10 +17,6 @@ window.addEventListener("mousedown", () => {
 window.addEventListener("mouseup", () => {
   drawColor = false;
 });
-
-color.oninput = (e) => {
-    colorChoice = e.target.value;
-}
 
 function setupGrid(size) {
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -38,9 +36,21 @@ function setupGrid(size) {
   }
 }
 
-reset.addEventListener("click", function () {
+function clearGrid() {
   grid.innerHTML = "";
   setupGrid(defaultSize);
+}
+
+color.addEventListener("input", (e) => {
+  colorChoice = e.target.value;
+});
+
+reset.addEventListener("click", () => {
+  reloadGrid();
+});
+
+slider.addEventListener("mousemove", (e) => {
+  setupGrid(e.target.value);
 });
 
 setupGrid(defaultSize);
