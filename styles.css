@@ -10,6 +10,17 @@ body {
   flex-direction: column;
 }
 
+#navbar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+input, button {
+    height: 30px;
+}
+
 #grid-container {
   height: 650px;
   width: 650px;
