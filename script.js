@@ -43,12 +43,12 @@ function clearGrid() {
 }
 
 function displaySizeValue(size) {
-    displaySize.innerHTML = `${size} x ${size}`;
+  displaySize.innerHTML = `${size} x ${size}`;
 }
 
 function changeGridSize(size) {
-    sizeChoice = size;
-    clearGrid();
+  sizeChoice = size;
+  clearGrid();
 }
 
 color.addEventListener("input", (e) => {
@@ -60,11 +60,11 @@ reset.addEventListener("click", () => {
 });
 
 slider.addEventListener("change", (e) => {
-    changeGridSize(e.target.value);
-})
+  changeGridSize(e.target.value);
+});
 
 slider.addEventListener("mousemove", (e) => {
-    displaySizeValue(e.target.value);
-})
+  displaySizeValue(e.target.value);
+});
 
 setupGrid(defaultSize);
