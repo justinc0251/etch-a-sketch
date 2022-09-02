@@ -9,6 +9,7 @@ const grid = document.getElementById("grid-container");
 const reset = document.getElementById("reset");
 const color = document.getElementById("color");
 const slider = document.getElementById("size");
+const displaySize = document.getElementById("displaySize");
 
 window.addEventListener("mousedown", () => {
   drawColor = true;
@@ -41,6 +42,10 @@ function clearGrid() {
   setupGrid(sizeChoice);
 }
 
+function displaySizeValue(size) {
+    displaySize.innerHTML = `${size} x ${size}`;
+}
+
 function changeGridSize(size) {
     sizeChoice = size;
     clearGrid();
@@ -56,6 +61,10 @@ reset.addEventListener("click", () => {
 
 slider.addEventListener("change", (e) => {
     changeGridSize(e.target.value);
+})
+
+slider.addEventListener("mousemove", (e) => {
+    displaySizeValue(e.target.value);
 })
 
 setupGrid(defaultSize);
