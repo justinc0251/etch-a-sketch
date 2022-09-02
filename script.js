@@ -3,6 +3,7 @@ const defaultSize = 16;
 const defaultColor = "lightblue";
 
 const grid = document.getElementById("grid-container");
+const reset = document.getElementById("reset");
 
 let drawColor = false;
 
@@ -31,5 +32,10 @@ function setupGrid(size) {
     grid.appendChild(div).className = "box";
   }
 }
+
+reset.addEventListener("click", function () {
+  grid.innerHTML = "";
+  setupGrid(defaultSize);
+});
 
 setupGrid(defaultSize);
