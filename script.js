@@ -38,7 +38,12 @@ function setupGrid(size) {
 
 function clearGrid() {
   grid.innerHTML = "";
-  setupGrid(defaultSize);
+  setupGrid(sizeChoice);
+}
+
+function changeGridSize(size) {
+    sizeChoice = size;
+    clearGrid();
 }
 
 color.addEventListener("input", (e) => {
@@ -49,8 +54,8 @@ reset.addEventListener("click", () => {
   clearGrid();
 });
 
-slider.addEventListener("mousemove", (e) => {
-  setupGrid(e.target.value);
-});
+slider.addEventListener("change", (e) => {
+    changeGridSize(e.target.value);
+})
 
 setupGrid(defaultSize);
