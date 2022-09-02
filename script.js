@@ -19,7 +19,6 @@ function setupGrid(size) {
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
   for (i = 0; i < size * size; i++) {
     const div = document.createElement("div");
-    div.classList.add("box");
 
     div.addEventListener("mouseover", function () {
       if (drawColor) div.style.backgroundColor = defaultColor;
@@ -29,7 +28,7 @@ function setupGrid(size) {
       div.style.backgroundColor = defaultColor;
     });
 
-    grid.appendChild(div);
+    grid.appendChild(div).className = "box";
   }
 }
 
