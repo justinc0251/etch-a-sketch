@@ -4,14 +4,15 @@ const defaultColor = "lightblue";
 
 const grid = document.getElementById("grid-container");
 const reset = document.getElementById("reset");
+const color = document.getElementById("color");
 
 let drawColor = false;
 
-window.addEventListener("mousedown", function () {
+window.addEventListener("mousedown", () => {
   drawColor = true;
 });
 
-window.addEventListener("mouseup", function () {
+window.addEventListener("mouseup", () => {
   drawColor = false;
 });
 
@@ -21,11 +22,11 @@ function setupGrid(size) {
   for (i = 0; i < size * size; i++) {
     const div = document.createElement("div");
 
-    div.addEventListener("mouseover", function () {
+    div.addEventListener("mouseover", () => {
       if (drawColor) div.style.backgroundColor = defaultColor;
     });
 
-    div.addEventListener("mousedown", function () {
+    div.addEventListener("mousedown", () => {
       div.style.backgroundColor = defaultColor;
     });
 
