@@ -37,6 +37,11 @@ body {
   width: 330px;
 }
 
+img {
+    height: 27px;
+    width: 45px;
+}
+
 input,
 button {
   height: 30px;
@@ -49,7 +54,7 @@ button {
 #grid-container {
   height: 650px;
   width: 650px;
-  display: grid;
+  display: grid; 
   gap: 1px;
   background-color: black;
   border: 3px solid black;

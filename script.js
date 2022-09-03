@@ -10,6 +10,7 @@ const reset = document.getElementById("reset");
 const color = document.getElementById("color");
 const slider = document.getElementById("size");
 const displaySize = document.getElementById("displaySize");
+const eraser = document.getElementById("eraser");
 
 window.addEventListener("mousedown", () => {
   drawColor = true;
@@ -57,6 +58,10 @@ color.addEventListener("input", (e) => {
 
 reset.addEventListener("click", () => {
   clearGrid();
+});
+
+eraser.addEventListener("click", () => {
+    colorChoice = "white";
 });
 
 slider.addEventListener("change", (e) => {
