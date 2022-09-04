@@ -61,7 +61,7 @@ reset.addEventListener("click", () => {
 });
 
 eraser.addEventListener("click", () => {
-    colorChoice = "white";
+  colorChoice = "white";
 });
 
 slider.addEventListener("change", (e) => {
