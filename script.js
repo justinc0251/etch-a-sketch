@@ -11,6 +11,7 @@ const color = document.getElementById("color");
 const slider = document.getElementById("size");
 const displaySize = document.getElementById("displaySize");
 const eraser = document.getElementById("eraser");
+const removeLines = document.getElementById("remove-lines");
 
 window.addEventListener("mousedown", () => {
   drawColor = true;
@@ -58,6 +59,10 @@ color.addEventListener("input", (e) => {
 
 reset.addEventListener("click", () => {
   clearGrid();
+});
+
+removeLines.addEventListener("click", () => {
+  grid.style.gap = 0;
 });
 
 eraser.addEventListener("click", () => {
