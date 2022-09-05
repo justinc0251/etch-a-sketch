@@ -31,14 +31,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 10px 5px;
-  background-color: lightgrey;
-  border-radius: 4px;
-  width: 400px;
+  width: 450px;
 }
 
 #grid-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: lightgrey;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+#settings-container {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgrey;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+#settings {
   display: flex;
   gap: 15px;
   align-items: center;
@@ -96,6 +112,11 @@ button {
 
 .box {
   background-color: white;
+}
+
+.button-on {
+  background-color: lightgrey;
+  color: white;
 }
 
 .footer {
