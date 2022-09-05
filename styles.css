@@ -50,8 +50,25 @@ body {
 }
 
 img {
-  height: 27px;
+  height: 20px;
   width: 45px;
+}
+
+#eraser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#rainbow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+#color {
+  padding: 1px 5px;
 }
 
 input,
