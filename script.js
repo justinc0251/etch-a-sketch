@@ -13,6 +13,7 @@ const color = document.getElementById("color");
 const slider = document.getElementById("size");
 const displaySize = document.getElementById("displaySize");
 const eraser = document.getElementById("eraser");
+const addLines = document.getElementById("add-lines");
 const removeLines = document.getElementById("remove-lines");
 const rainbowButton = document.getElementById("rainbow");
 
@@ -82,6 +83,10 @@ color.addEventListener("input", (e) => {
 
 reset.addEventListener("click", () => {
   clearGrid();
+});
+
+addLines.addEventListener("click", () => {
+  grid.style.gap = "1px";
 });
 
 removeLines.addEventListener("click", () => {
