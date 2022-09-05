@@ -12,15 +12,20 @@
     <div class="main">
       <div id="navbar">
         <div id="grid-settings">
-          <button id="reset">Reset</button>
-          <button id="remove-lines">Remove Grid Lines</button>
-          <input type="range" id="size" min="1" max="100" value="16" />
-          <div id="displaySize">16 x 16</div>
+          <button id="add-lines">Turn On Grid Lines</button>
+          <button id="remove-lines">Turn Off Grid Lines</button>
         </div>
-        <div id="color-options">
-          <button id="eraser"><img src="images/eraser.png" /></button>
-          <button id="rainbow"><img src="images/rainbow.jpeg" /></button>
-          <input type="color" id="color" value="#add8e6" />
+        <div id="settings-container">
+          <div id="settings">
+            <button id="reset">Reset</button>
+            <input type="range" id="size" min="1" max="100" value="16" />
+            <div id="displaySize">16 x 16</div>
+          </div>
+          <div id="color-options">
+            <button id="eraser"><img src="images/eraser.png" /></button>
+            <button id="rainbow"><img src="images/rainbow.jpeg" /></button>
+            <input type="color" id="color" value="#add8e6" />
+          </div>
         </div>
       </div>
       <div id="grid-container"></div>
