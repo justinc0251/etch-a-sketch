@@ -4,6 +4,7 @@ const defaultColor = "lightblue";
 let drawColor = false;
 let colorChoice = defaultColor;
 let sizeChoice = defaultSize;
+let erase = false;
 let rainbow = false;
 
 const grid = document.getElementById("grid-container");
@@ -31,7 +32,9 @@ function setupGrid(size) {
 
     div.addEventListener("mouseover", () => {
       if (drawColor) {
-        if (rainbow) {
+        if (erase) {
+          div.style.backgroundColor = "white";
+        } else if (rainbow) {
           const randomR = Math.floor(Math.random() * 256);
           const randomG = Math.floor(Math.random() * 256);
           const randomB = Math.floor(Math.random() * 256);
@@ -43,7 +46,9 @@ function setupGrid(size) {
     });
 
     div.addEventListener("mousedown", () => {
-      if (rainbow) {
+      if (erase) {
+        div.style.backgroundColor = "white";
+      } else if (rainbow) {
         const randomR = Math.floor(Math.random() * 256);
         const randomG = Math.floor(Math.random() * 256);
         const randomB = Math.floor(Math.random() * 256);
@@ -84,11 +89,21 @@ removeLines.addEventListener("click", () => {
 });
 
 eraser.addEventListener("click", () => {
-  colorChoice = "white";
+  if (erase == true) {
+    erase = false;
+  } else {
+    erase = true;
+  }
+  eraser.classList.toggle("button-on");
 });
 
 rainbowButton.addEventListener("click", () => {
-  rainbow = true;
+  if (rainbow == true) {
+    rainbow = false;
+  } else {
+    rainbow = true;
+  }
+  rainbowButton.classList.toggle("button-on");
 });
 
 slider.addEventListener("change", (e) => {
