@@ -36,10 +36,7 @@ function setupGrid(size) {
         if (erase) {
           div.style.backgroundColor = "white";
         } else if (rainbow) {
-          const randomR = Math.floor(Math.random() * 256);
-          const randomG = Math.floor(Math.random() * 256);
-          const randomB = Math.floor(Math.random() * 256);
-          div.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+          drawRainbow(div);
         } else {
           div.style.backgroundColor = colorChoice;
         }
@@ -50,10 +47,7 @@ function setupGrid(size) {
       if (erase) {
         div.style.backgroundColor = "white";
       } else if (rainbow) {
-        const randomR = Math.floor(Math.random() * 256);
-        const randomG = Math.floor(Math.random() * 256);
-        const randomB = Math.floor(Math.random() * 256);
-        div.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+        drawRainbow(div);
       } else {
         div.style.backgroundColor = colorChoice;
       }
@@ -61,6 +55,13 @@ function setupGrid(size) {
 
     grid.appendChild(div).className = "box";
   }
+}
+
+function drawRainbow(div) {
+  const randomR = Math.floor(Math.random() * 256);
+  const randomG = Math.floor(Math.random() * 256);
+  const randomB = Math.floor(Math.random() * 256);
+  div.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
 }
 
 function clearGrid() {
@@ -87,10 +88,14 @@ reset.addEventListener("click", () => {
 
 addLines.addEventListener("click", () => {
   grid.style.gap = "1px";
+  addLines.style.backgroundColor = "lightgrey";
+  removeLines.style.backgroundColor = "white";
 });
 
 removeLines.addEventListener("click", () => {
   grid.style.gap = 0;
+  removeLines.style.backgroundColor = "lightgrey";
+  addLines.style.backgroundColor = "white";
 });
 
 eraser.addEventListener("click", () => {
